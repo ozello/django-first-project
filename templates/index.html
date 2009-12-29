@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block style %}
+
+	{{ block.super }}
+
+		<style type="text/css">
+		    div.mudaCor {
+		    	background: red;
+		    }
+		    div#cor {
+		    	width: 100px;
+		    	height: 100px;
+		    	border: 1px solid silver;
+		    }
+		    #insere_aqui {
+		    	display: none;
+		    }
+		</style>
+{% endblock style %}
+
+{% block scripts %}
+
+	{{ block.super }}
+
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			$("select#listaEstados").change(function(){
+				
+				$('#insere_aqui').ajaxStart(function(){
+					$(this).show();
+				}).ajaxStop(function(){
+					$(this).hide();
+				});
+				
+				$('select#listaCidades').html('<option value="sda">Procurando :::::::</option>');
+				$.post('/municipios/ajax_cidades/',
+					{ estado : $(this).val() },
+					function(resposta){
+						$('select#listaCidades').html(resposta);
+						
+						var inserir = $(resposta).find('option');
+						$('select#teste').html(inserir);
+					}
+				);					
+			});
+			$('button#exibir').click(function(){
+				alert($('select#listaCidades').val());
+			});
+		});
+	</script>
+{% endblock scripts %}
+
+{% block conteudo %}
+
+	{{ block.super }}
+
+	<h1>Teste da pagina com ajax</h1>
+	<p>Teste para verificar a troca de repositório</p>
+	<form name="frmAjax">
+		<label for="listaEstados">Estado:&nbsp;</label>
+		<select id="listaEstados">
+			<option value="0">Selecione o Estado</option>
+			<option value="SP">São Paulo</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="MG">Minas Gerais</option>
+			<option value="ES">Espirito Santo</option>
+			<option value="PR">Parana</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="RS">Rio Grande do Sul</option>
+			<option value="BA">Bahia</option>
+			<option value="DF">Distrito Federal</option>
+		</select>
+		
+		<br />
+		<br />
+		<br />
+		
+		<label for="listaCidades">Cidade:&nbsp;</label>
+		<select id="listaCidades">
+			<option id="opcoes" value="0">-- Primeiro selecione o estado --</option>
+		</select>
+		
+		<br />
+		<br />
+		<div id="insere_aqui">
+			<img src="{{ MEDIA_URL }}img/loader/27.gif">
+			<span>Carregando....</span>
+		</div>
+
+		<br />
+		<br />
+		
+		<button type="button" id="exibir">Exibir ID da Cidade</button>
+	</form>
+{% endblock conteudo %}

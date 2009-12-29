@@ -1,0 +1,65 @@
+div#menu {
+	width: 100%;
+	/*height: 300px;*/
+	overflow: auto;
+	margin: 0;
+	background: #999;
+}
+
+div#menu h3 {
+	font-size: 12px;
+	cursor: pointer;
+	line-height: 18px;
+	padding-left: 20px;
+	/*margin: 1px 1px;*/
+	margin-bottom: 1px;
+	margin-top: 1px;
+	background: #CACACA url("../img/sprite-menu.gif") 3px center no-repeat;
+	background-position: -2px -396px;
+	border-left: 5px solid #676767;	
+}
+
+div#menu h3:hover {
+	background-position: -2px -476px;
+}
+
+div#menu h3.corrente {
+	background: #CACACA url("../img/sprite-menu.gif") 3px center no-repeat;
+	background-position: -2px -76px;
+}
+
+div#menu h3.corrente:hover {
+	background-position: -2px -156px;
+}
+
+div#menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+div#menu li a {
+	display: block;
+	background: #DBD9D9 url("../img/bg-seta.gif") no-repeat 98%;
+	color: #333;
+	border-left: 5px solid #676767;
+	text-decoration: none;
+	padding: 3px 15px 3px 10px;
+	margin-bottom: 1px;
+}
+
+div#menu li a:hover {
+	background: #DEDEDE url("../img/bg-seta.gif") no-repeat 98%;
+	color: #999;
+	border-left: 5px solid #676767;
+}
+
+div#titulo_menu {
+	border-left: 5px solid #676767;
+	/*border-right: 1px solid #ABA5A7;*/
+	background: #CACACA;
+}
+div#titulo_menu h3 {
+	padding: 5px 10px;
+	margin: 0;
+}

@@ -1,0 +1,103 @@
+body {
+	text-align: center;
+	margin: 0;
+	padding: 0 5px;
+	background: #407C72;
+	font: 11px/1.2 Arial, Helvetica, sans-serif;
+	color: #292929;
+}
+
+#tudo {
+	width: 100%;
+	margin: 0 auto;
+	text-align: left;
+	background: white;
+}
+
+#topo {
+	height: 90px;
+	background: blue;
+	border-top: solid thin;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+#conteudo {
+	width: 80%;
+	float: right;
+}
+
+#navegacao {
+	width: 19.5%;
+	height: 100%;
+	float: left;
+	background: #C3E7D2;
+}
+
+#selecao_links {
+	padding: 0;
+	margin: 0;
+	width: 99%;
+	height: 100px;
+	/*border-right: thin dotted;*/
+	border-left: thin solid #ccc;
+	border-bottom: thin solid #ccc;
+}
+
+#idiomas {
+	padding: 10px;
+	float: left;
+}
+
+#link_externo {
+	padding: 10px;
+	float: right;
+}
+
+#link_externo A {
+	text-decoration: none;
+	color: inherit;
+}
+
+#rodape {
+	clear: both;
+	height: 28px;
+	background: #4B4546;
+	border: ridge;
+	vertical-align: middle;
+}
+
+#rodape p {
+	padding: 0;
+	margin: 0;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	color:#FFFFFF;
+	text-align: center;
+	vertical-align:middle;
+}
+
+#rodape p a {
+	text-decoration: none;
+	color: #FFF;
+}
+#rodape p a:hover {
+	text-decoration: underline;
+	color: #FFF;
+}
+.logar {
+	padding-top: 10%;
+}
+.logarCentro {
+	width: 250px;
+	border: 1px solid silver;
+	padding-bottom: 5px;
+}
+.header {
+	border-bottom: 1px solid silver;
+	margin-bottom: 5px;
+	padding: 3px;
+	font: 14px/1.2 Arial, Helvetica, sans-serif;
+}

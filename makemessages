@@ -1,0 +1,4 @@
+#!/bin/bash
+./manage.py makemessages -l en
+./manage.py makemessages -l es
+

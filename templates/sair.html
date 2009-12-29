@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block titulo %}
+	{% trans "Voce saiu do sistema" %} - {{ block.super }}
+{% endblock %}
+
+{% block conteudo %}
+	{{ block.super }}
+
+	Voce saiu do sistema. Obrigado e volte sempre!
+{% endblock conteudo %}

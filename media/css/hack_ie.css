@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+
+* html li, html li a {height: 1%;}
+* html #menu h3, html #menu h3.corrente {/*IE 6 e Anteriores*/ background-position: 8px center;}  
+*:first-child+html #menu h3, *:first-child+html h3.corrente {/* IE 7 */ background-position: 8px center;}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block titulo %}
+	{% trans "Entrar" %} - {{ block.super }}
+{% endblock %}
+
+{% block conteudo %}
+
+	<form method="post">
+		<div align="center" class="logar">
+			<div class="logarCentro">
+				<div class="header">
+					<strong>Autenticação</strong>
+				</div>
+				<table class="form">
+			 	
+				  	{{ form }}
+				
+				  	<tr>
+				   		<th>&nbsp;</th>
+				   		<td><input type="submit" value="{% trans "Entrar" %}"/></td>
+				  	</tr>
+			 	</table>
+			</div>
+		</div>
+	</form>
+{% endblock conteudo %}

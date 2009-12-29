@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+{% load i18n %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+    <head>
+        <title>{% block titulo %}{% trans "ALOZ - Sistemas" %}{% endblock %}</title>
+
+		{% block meta %}
+			<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+			<meta http-equiv="Content-Language" content="pt-br" />
+			<meta name="keywords" content="Sistemas, Web, Aplicações, Ozelo, ALOZ, blog" />
+			<meta name="description" content="Portal/Sistemas web desenvolvido por ALOZ - Sistemas." />
+		{% endblock meta %}
+
+		{% block feeds %}
+			<link rel="alternate" type="application/rss+xml" title="Ultimos artigos do Alatazan" href="/rss/ultimos/" />
+		{% endblock feeds %}
+
+		{% block style %}
+			<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/layout.css"/>
+			<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/layout_menu.css"/>
+			<!--[if lt IE 8]>
+    			<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/hack_ie.css"/>
+  			<![endif]-->
+		{% endblock style %}
+
+		{% block scripts %}
+		    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.3.2.js"></script>
+			<script type="text/javascript" src="{{ MEDIA_URL }}js/menu.js"></script>
+		{% endblock scripts %}
+    </head>
+    
+    <body>
+        <div id="tudo">
+            
+            <div id="topo">
+                {% block topo %}
+				
+				<p>Teste de paragrafo</p>
+                    
+                {% endblock topo %}
+            </div>
+            
+            <div id="conteudo">
+            
+                {% block conteudo %}
+				
+				<p>Teste de conteudo principal</p>
+                    
+                {% endblock conteudo %}
+					
+            </div>
+            
+            <div id="navegacao">
+                {% block navegacao %}
+                
+            	<div id="selecao_links">
+					<div id="idiomas">
+						<form action="/i18n/setlang/" method="post">
+							<select name="language">
+								<option value="0">Idioma</option>
+								<option value="0">Portugues</option>
+								<option value="0">Ingles</option>
+								<option value="0">Espanhol</option>
+							</select>
+						</form>
+					</div>
+					<div id="link_externo">
+						<a href="/teste">twiter</a>
+					</div>
+            	</div>
+				
+				{% include "menu.html" %}
+
+                {% endblock navegacao %}
+				
+				<div>
+					<p>div do conteudo auxiliar 1</p>
+				</div>
+				<div>
+					<p>div do conteudo auxiliar 2</p>
+				</div>
+				<div>
+					<p>div do conteudo auxiliar 3</p>
+				</div>
+            </div>
+            
+            {% include "rodape.html" %}
+            
+        </div>
+    </body>
+</html>

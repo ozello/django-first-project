@@ -1,0 +1,72 @@
+{% load i18n %}
+
+<div id="titulo_menu">
+	<h3>{% trans "Navegação" %}</h3>
+</div>
+<div id="menu">
+    <h3>{% trans "Acesso ao sistema" %} {% if user.is_authenticated %} - {% endif %} {{ user.username }}</h3>
+        <ul>
+        	{% if user.is_authenticated %}
+				<li><a href="{% url sair %}">{% trans "Sair" %}</a></li>
+			{% else %}
+				<li><a href="{% url entrar %}">{% trans "Entrar" %}</a></li>
+			{% endif %}
+        </ul>
+    <h3>Teste 2</h3>
+        <ul>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+        </ul>
+    <h3>Teste 3</h3>
+        <ul>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+        </ul>
+    <h3>Teste 4</h3>
+        <ul>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+        </ul>
+    <h3>Teste 5</h3>
+        <ul>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+        </ul>
+    <h3>Teste 6</h3>
+        <ul>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+        </ul>
+    <h3>Teste 7</h3>
+        <ul>
+            <li><a href="destino.html" title="primeiro">Primeiro item</a></li>
+            <li><a href="destino.html" title="segundo">Segundo item</a></li>
+            <li><a href="destino.html" title="terceiro">Terceiro item</a></li>
+        </ul>
+</div>
